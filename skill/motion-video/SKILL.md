@@ -69,12 +69,19 @@ pasta do projeto (ou na pasta do projeto no vault, se ele tiver um segundo cére
    - Fundo escuro com **uma** cor de destaque forte é o que lê melhor no celular; a cor de apoio só diferencia categorias.
    - O destaque precisa contrastar com o fundo e com o branco da legenda: confira a palavra acesa na legenda da foto.
    - `luz` é a cor do brilho que respira atrás das cenas; em geral, a mesma do destaque.
-5. **Elementos.**
-   - Componentes do 21st.dev / Magic UI como referência, por cena.
+5. **Elementos: buscar referência antes de desenhar.** Não invente componente do zero. Pra cada cena do storyboard:
+   1. **Procure nas duas vitrines** o tipo de peça que a cena pede (lista que se monta, números subindo, conexões entre ícones, cartões, terminal, gráfico):
+      - **Magic UI** (https://magicui.design/docs/components): cada página tem demo e código aberto. As que mais servem em vídeo: Animated Beam, Orbiting Circles, Number Ticker, Animated List, Border Beam, Blur Fade, Word Rotate, Bento Grid, Particles, Terminal.
+      - **21st.dev** (https://21st.dev/community/components): vitrine maior, feita pela comunidade; busque pelo nome da peça ("animated list", "testimonial", "pricing", "timeline").
+   2. **Mostre 2 ou 3 referências** por cena pro usuário: o link da página e, se puder, uma captura da demo. Ele escolhe ou pede outras.
+   3. **Adapte o código escolhido ao template**, sem copiar no escuro: o movimento passa a depender do tempo `t` da cena e das âncoras (`L`, `W`), com `mola`/`entra`/`suave` do `base.tsx`, porque animação com tempo próprio (CSS, `animate`, `setInterval`) não fica presa à fala. Troque as cores e as fontes pelas de `cores.ts` e `fontes.ts`.
+   4. **Foto parada** da cena com a peça (`--so-stills`) antes de seguir.
    - Ícones das marcas **na cor do app** (`IconeApp`); ícones de linha do Lucide (`Lucide`).
    - Celular = **iPhone realista** (`Iphone`), a menos que ele prefira o minimalista (`pagina=celular&op=minimal`).
    - Legenda **sempre** na tela. Muita gente assiste sem som.
-6. **Movimento.** Clipes curtos de ~8 s pra ele sentir (`render.ts --ini <s> --dur <fim>`). Padrão que funciona:
+6. **Movimento.** Antes de animar, **leia a skill `motion-design`** (da LottieFiles, instalada junto com o kit em `~/.claude/skills/motion-design/`): ela traz os arquétipos de movimento, as curvas, as durações e o stagger. Proponha o arquétipo que combina com o briefing (o template nasceu no "Premium") e confirme com o usuário. Se a skill não estiver instalada, rode `bunx --bun skills add lottiefiles/motion-design-skill -g -a claude-code -y --copy`.
+   Pra dúvida de API do Motion (molas, `useAnimationFrame`, `spring()`), a documentação é https://motion.dev/docs.
+   Clipes curtos de ~8 s pra ele sentir (`render.ts --ini <s> --dur <fim>`). Padrão que funciona:
    - **câmera contínua**: cenas como janelas que a câmera atravessa (`Camada`), sem corte seco nem tremor;
    - molas calmas (`mola`, `CALMA`);
    - ritmo com respiro;

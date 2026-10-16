@@ -24,6 +24,11 @@ fi
 ok "bun $(bun --version)"
 (cd "$AQUI/web" && bun install)
 ok "dependências da página web"
+# princípios de movimento (arquétipos, curvas, durações) que a skill motion-video consulta na etapa de movimento
+if [ ! -f "$HOME/.claude/skills/motion-design/SKILL.md" ]; then
+  (cd "$HOME" && bunx --bun skills add lottiefiles/motion-design-skill -g -a claude-code -y --copy >/dev/null)
+fi
+ok "skill motion-design (LottieFiles)"
 
 echo "4/5 Google Chrome (o gravador usa o Chrome sem tela)"
 if [ -d "/Applications/Google Chrome.app" ]; then ok chrome; else falta "Instale o Google Chrome: https://www.google.com/chrome"; fi
