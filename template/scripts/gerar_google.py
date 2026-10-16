@@ -1,15 +1,15 @@
 # Gera o voiceover pelo Google Cloud Text-to-Speech (Chirp 3 HD), uma frase por take:
 # <pasta>/NN_0.wav + <saida>.takes.json + <saida>.wav (takes aparados + pausas do roteiro).
 # Chave: variável GOOGLE_TTS_API_KEY ou o arquivo ~/.config/motion-video/google-tts.env (linha GOOGLE_TTS_API_KEY=...).
-# Vozes pt-BR: https://cloud.google.com/text-to-speech/docs/chirp3-hd (padrão: Puck).
+# Vozes pt-BR: https://cloud.google.com/text-to-speech/docs/chirp3-hd. Não há voz padrão: ouça as amostras e escolha.
 #
 # Fica de graça: o Chirp 3 HD tem 1 milhão de caracteres grátis por mês, e um vídeo de 90 s tem ~1.300.
 # Este script conta cada caractere enviado em ~/.config/motion-video/uso.json e se recusa a passar de
 # 900 mil no mês (mude com MOTION_LIMITE_CARACTERES), pra nunca chegar perto da cobrança.
 #
 # Uso:
-#   ROTEIRO=scripts/roteiro.json python gerar_google.py <pasta_takes> <saida.wav> [voz]
-#   python gerar_google.py --amostra "Uma frase do roteiro." Puck Charon Kore Aoede   → audio/amostras/<voz>.wav
+#   ROTEIRO=scripts/roteiro.json python gerar_google.py <pasta_takes> <saida.wav> <voz>
+#   python gerar_google.py --amostra "Uma frase do roteiro." Charon Fenrir Kore Aoede   → audio/amostras/<voz>.wav
 #   python gerar_google.py --uso                                                      → quanto já foi usado no mês
 import sys, os, json, base64, urllib.request, urllib.error, datetime
 from pathlib import Path
@@ -58,14 +58,15 @@ def falar(texto, voz):
 import torch, torchaudio as ta
 
 if sys.argv[1:2] == ["--amostra"]:
-    frase, vozes = sys.argv[2], sys.argv[3:] or ["Puck", "Charon", "Kore", "Aoede"]
+    frase, vozes = sys.argv[2], sys.argv[3:] or ["Charon", "Fenrir", "Kore", "Aoede"]
     pasta = Path("audio/amostras"); pasta.mkdir(parents=True, exist_ok=True)
     for v in vozes:
         (pasta / f"{v}.wav").write_bytes(falar(frase, v)); print("ok", pasta / f"{v}.wav")
     sys.exit()
 
 pasta, saida = Path(sys.argv[1]), sys.argv[2]
-voz = sys.argv[3] if len(sys.argv) > 3 else "Puck"
+if len(sys.argv) < 4: sys.exit("Falta a voz. Ouça as amostras (--amostra) e passe o nome escolhido, ex.: ... audio/vo.wav Charon")
+voz = sys.argv[3]
 pasta.mkdir(parents=True, exist_ok=True)
 roteiro = json.loads(Path(os.environ["ROTEIRO"]).read_text())
 

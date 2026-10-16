@@ -87,7 +87,7 @@ pasta do projeto (ou na pasta do projeto no vault, se ele tiver um segundo cére
    - ritmo com respiro;
    - nenhuma tela vazia entre as cenas.
 7. **Voz, trilha e efeitos.**
-   - Voz: Google Chirp 3 HD, dentro da cota grátis. Gere a primeira frase do roteiro em 3 ou 4 vozes pra ele ouvir (`$P -I scripts/gerar_google.py --amostra "frase" Puck Charon Kore Aoede` → `audio/amostras/`). Ou a voz dele (ver "Narração com a própria voz").
+   - Voz: Google Chirp 3 HD, dentro da cota grátis. Gere a primeira frase do roteiro em 3 ou 4 vozes pra ele ouvir (`$P -I scripts/gerar_google.py --amostra "frase" Charon Fenrir Kore Aoede` → `audio/amostras/`). Não existe voz padrão: se ele não gostar, gere outras da lista do Google (cerca de 30 em pt-BR) até ele escolher, e registre a escolhida no storyboard. Ou a voz dele (ver "Narração com a própria voz").
    - Se não houver chave, guie o usuário pela seção "Chave da voz (de graça)" do `README.md` do template, um passo de cada vez, esperando ele confirmar cada um.
    - Trilha: composta em código, a **−11 dB**. A −20 dB some no alto-falante do celular.
    - Efeitos: poucos e discretos.
@@ -104,7 +104,7 @@ Rode dentro da pasta do projeto (`~/Developer/motion-<nome>/`, copiada do templa
 ```bash
 P=~/Developer/motion-template/.venv/bin/python   # venv com whisper, torch, scipy
 export ROTEIRO=scripts/roteiro.json        # [{tela, falado, pausa}]: tela = legenda, falado = o que a voz lê
-$P -I scripts/gerar_google.py audio/takes audio/vo.wav Puck          # voz (chave: ~/.config/motion-video/google-tts.env; --uso mostra a cota do mês)
+$P -I scripts/gerar_google.py audio/takes audio/vo.wav <Voz>         # a voz escolhida (chave: ~/.config/motion-video/google-tts.env; --uso mostra a cota do mês)
 bash scripts/tratar_voz.sh audio/vo.wav audio/vo                      # gera vo-limpa.wav
 $P -I scripts/sincronia.py audio/vo.takes.json audio/takes audio/vo-limpa.wav web/src/sync.json audio/voz-final.wav
 D=$(python3 -c "import json;print(json.load(open('web/src/sync.json'))['duration'])")

@@ -34,10 +34,10 @@ Passo a passo, com a sua conta Google (uns 10 minutos):
 6. **Alerta de orçamento.** Em https://console.cloud.google.com/billing/budgets: **Criar orçamento**, valor **US$ 1**, alertas em 50%, 90% e 100%. O e-mail chega na sua caixa.
 7. **Testar e escolher a voz.** Gere a mesma frase em quatro vozes e ouça:
    ```bash
-   cd ~/Developer/motion-template && .venv/bin/python -I scripts/gerar_google.py --amostra "Quanto tempo você levaria pra fazer um vídeo assim?" Puck Charon Kore Aoede
+   cd ~/Developer/motion-template && .venv/bin/python -I scripts/gerar_google.py --amostra "Quanto tempo você levaria pra fazer um vídeo assim?" Charon Fenrir Kore Aoede
    open audio/amostras
    ```
-   Puck e Charon são masculinas; Kore e Aoede, femininas. A lista completa está em https://cloud.google.com/text-to-speech/docs/chirp3-hd.
+   Charon e Fenrir são masculinas; Kore e Aoede, femininas. São só quatro pra começar: o Google tem cerca de 30 vozes em pt-BR (lista em https://cloud.google.com/text-to-speech/docs/chirp3-hd) e dá pra ouvir qualquer uma pelo nome do mesmo jeito. Não tem voz padrão: a que você escolher vira a voz dos seus vídeos.
 
 Se aparecer "O Google recusou (403)", a API do passo 3 não foi ativada no projeto da chave, ou a restrição do passo 4 marcou outra API.
 
