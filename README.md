@@ -36,7 +36,7 @@ Clona numa pasta temporária, lê o README.md e segue o bloco de instruções de
 > [!IMPORTANT]
 > **Instruções para a IA que vai instalar.** Faça tudo você mesmo, nesta ordem:
 >
-> 1. **Clone numa pasta temporária.** `git clone https://github.com/danishiota10-code/motion-video-kit.git "$TMPDIR/motion-video-kit"`. Se o clone pedir login, o repositório é privado: peça pro usuário rodar `gh auth login` (ou aceitar o convite de colaborador no GitHub) e tente de novo. Se o `git` não existir, instale antes (`xcode-select --install`).
+> 1. **Clone numa pasta temporária.** `git clone https://github.com/danishiota10-code/motion-video-kit.git "$TMPDIR/motion-video-kit"`. O repositório é público: não precisa de conta nem de login no GitHub. Se o `git` não existir, instale antes (`xcode-select --install`).
 > 2. **Instale a skill no nível do usuário**, pra ela funcionar em qualquer pasta: copie `skill/motion-video/` pra `~/.claude/skills/motion-video/`. Se já existir, substitua: é atualização.
 > 3. **Instale o template.** Se `~/Developer/motion-template/` não existir, copie a pasta `template/` pra lá (`mkdir -p ~/Developer && cp -R "$TMPDIR/motion-video-kit/template" ~/Developer/motion-template`). Se já existir, é atualização: copie por cima **sem apagar** `.venv/`, `node_modules/`, `audio/` e `out/` (ex.: `rsync -a --exclude .venv --exclude node_modules --exclude audio --exclude out "$TMPDIR/motion-video-kit/template/" ~/Developer/motion-template/`). Nunca mexa nas pastas `~/Developer/motion-<nome>/` dos vídeos que o usuário já fez.
 > 4. **Prepare a máquina:** `bash ~/Developer/motion-template/instalar.sh`. Demora alguns minutos (o Whisper tem ~1 GB). Se faltar o Homebrew ou o Chrome, o script avisa: explique pro usuário como instalar e rode de novo.
