@@ -1,0 +1,267 @@
+{
+ "duration": 21.16,
+ "lines": [
+  {
+   "text": "Quanto tempo você levaria pra fazer um vídeo assim?",
+   "start": 0.8,
+   "end": 3.26,
+   "words": [
+    {
+     "w": "Quanto",
+     "start": 0.8,
+     "end": 1.14
+    },
+    {
+     "w": "tempo",
+     "start": 1.14,
+     "end": 1.4
+    },
+    {
+     "w": "você",
+     "start": 1.4,
+     "end": 1.72
+    },
+    {
+     "w": "levaria",
+     "start": 1.72,
+     "end": 2.2
+    },
+    {
+     "w": "pra",
+     "start": 2.2,
+     "end": 2.3
+    },
+    {
+     "w": "fazer",
+     "start": 2.3,
+     "end": 2.54
+    },
+    {
+     "w": "um",
+     "start": 2.54,
+     "end": 2.68
+    },
+    {
+     "w": "vídeo",
+     "start": 2.68,
+     "end": 2.96
+    },
+    {
+     "w": "assim?",
+     "start": 2.96,
+     "end": 3.26
+    }
+   ]
+  },
+  {
+   "text": "Aqui, cada cena é uma página web.",
+   "start": 3.98,
+   "end": 5.78,
+   "words": [
+    {
+     "w": "Aqui,",
+     "start": 3.98,
+     "end": 4.28
+    },
+    {
+     "w": "cada",
+     "start": 4.46,
+     "end": 4.62
+    },
+    {
+     "w": "cena",
+     "start": 4.62,
+     "end": 4.96
+    },
+    {
+     "w": "é",
+     "start": 4.96,
+     "end": 5.1
+    },
+    {
+     "w": "uma",
+     "start": 5.1,
+     "end": 5.16
+    },
+    {
+     "w": "página",
+     "start": 5.16,
+     "end": 5.48
+    },
+    {
+     "w": "web.",
+     "start": 5.48,
+     "end": 5.78
+    }
+   ]
+  },
+  {
+   "text": "A voz é gerada frase por frase.",
+   "start": 6.34,
+   "end": 8.28,
+   "words": [
+    {
+     "w": "A",
+     "start": 6.34,
+     "end": 6.44
+    },
+    {
+     "w": "voz",
+     "start": 6.44,
+     "end": 6.7
+    },
+    {
+     "w": "é",
+     "start": 6.7,
+     "end": 6.92
+    },
+    {
+     "w": "gerada",
+     "start": 6.92,
+     "end": 7.28
+    },
+    {
+     "w": "frase",
+     "start": 7.28,
+     "end": 7.68
+    },
+    {
+     "w": "por",
+     "start": 7.68,
+     "end": 7.92
+    },
+    {
+     "w": "frase.",
+     "start": 7.92,
+     "end": 8.28
+    }
+   ]
+  },
+  {
+   "text": "E cada animação se prende na palavra dita.",
+   "start": 8.72,
+   "end": 11.08,
+   "words": [
+    {
+     "w": "E",
+     "start": 8.72,
+     "end": 8.82
+    },
+    {
+     "w": "cada",
+     "start": 8.82,
+     "end": 9.08
+    },
+    {
+     "w": "animação",
+     "start": 9.08,
+     "end": 9.66
+    },
+    {
+     "w": "se",
+     "start": 9.66,
+     "end": 9.84
+    },
+    {
+     "w": "prende",
+     "start": 9.84,
+     "end": 10.22
+    },
+    {
+     "w": "na",
+     "start": 10.22,
+     "end": 10.32
+    },
+    {
+     "w": "palavra",
+     "start": 10.32,
+     "end": 10.62
+    },
+    {
+     "w": "dita.",
+     "start": 10.62,
+     "end": 11.08
+    }
+   ]
+  },
+  {
+   "text": "No fim, tudo é gravado quadro a quadro.",
+   "start": 11.6,
+   "end": 14.1,
+   "words": [
+    {
+     "w": "No",
+     "start": 11.6,
+     "end": 11.72
+    },
+    {
+     "w": "fim,",
+     "start": 11.72,
+     "end": 12.0
+    },
+    {
+     "w": "tudo",
+     "start": 12.32,
+     "end": 12.58
+    },
+    {
+     "w": "é",
+     "start": 12.58,
+     "end": 12.74
+    },
+    {
+     "w": "gravado",
+     "start": 12.74,
+     "end": 13.22
+    },
+    {
+     "w": "quadro",
+     "start": 13.22,
+     "end": 13.64
+    },
+    {
+     "w": "a",
+     "start": 13.64,
+     "end": 13.64
+    },
+    {
+     "w": "quadro.",
+     "start": 13.64,
+     "end": 14.1
+    }
+   ]
+  },
+  {
+   "text": "Agora é a sua vez.",
+   "start": 14.76,
+   "end": 15.82,
+   "words": [
+    {
+     "w": "Agora",
+     "start": 14.76,
+     "end": 15.08
+    },
+    {
+     "w": "é",
+     "start": 15.08,
+     "end": 15.26
+    },
+    {
+     "w": "a",
+     "start": 15.26,
+     "end": 15.3
+    },
+    {
+     "w": "sua",
+     "start": 15.3,
+     "end": 15.52
+    },
+    {
+     "w": "vez.",
+     "start": 15.52,
+     "end": 15.82
+    }
+   ]
+  }
+ ]
+}

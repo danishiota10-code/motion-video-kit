@@ -1,0 +1,7 @@
+# Ambiente Python dos scripts de áudio (voz, sincronia, trilha, efeitos, mixagem). Testado com Python 3.11.
+openai-whisper==20250625
+torch==2.6.0
+torchaudio==2.6.0
+scipy==1.17.1
+soundfile==0.14.0
+numpy==1.26.4

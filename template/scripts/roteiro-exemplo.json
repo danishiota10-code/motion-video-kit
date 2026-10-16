@@ -1,0 +1,32 @@
+[
+ {
+  "tela": "Quanto tempo você levaria pra fazer um vídeo assim?",
+  "falado": "Quanto tempo você levaria pra fazer um vídeo assim?",
+  "pausa": 0.5
+ },
+ {
+  "tela": "Aqui, cada cena é uma página web.",
+  "falado": "Aqui, cada cena é uma página web.",
+  "pausa": 0.3
+ },
+ {
+  "tela": "A voz é gerada frase por frase.",
+  "falado": "A voz é gerada frase por frase.",
+  "pausa": 0.3
+ },
+ {
+  "tela": "E cada animação se prende na palavra dita.",
+  "falado": "E cada animação se prende na palavra dita.",
+  "pausa": 0.4
+ },
+ {
+  "tela": "No fim, tudo é gravado quadro a quadro.",
+  "falado": "No fim, tudo é gravado quadro a quadro.",
+  "pausa": 0.6
+ },
+ {
+  "tela": "Agora é a sua vez.",
+  "falado": "Agora é a sua vez.",
+  "pausa": 0
+ }
+]

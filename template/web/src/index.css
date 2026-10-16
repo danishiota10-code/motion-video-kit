@@ -1,0 +1,6 @@
+@import "tailwindcss";
+html, body { margin: 0; background: #000; }
+#root { width: 1080px; height: 1920px; overflow: hidden; position: relative; }
+/* animação CSS pura, pra testar o caminho das animações que não passam pelo Motion */
+@keyframes deriva { 0% { transform: translate(-120px, -60px) scale(1); } 50% { transform: translate(140px, 80px) scale(1.25); } 100% { transform: translate(-120px, -60px) scale(1); } }
+.aurora { animation: deriva 9s ease-in-out infinite; }
